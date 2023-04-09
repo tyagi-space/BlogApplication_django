@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block start %}
+
+<table class="table">
+    <thead>
+      <tr>
+        <th >S.No.</th>
+        <th >Blog Title</th>
+        <th>Created At</th>
+        <th >Action</th>
+      </tr>
+    </thead>
+        <tbody>
+            {% for blog in all_blogs %}
+          <tr>
+            <th >{{forloop.counter}}</th>
+            <td>{{blog.title}}</td>
+            <td>{{blog.created_at}}</td>
+            <td><button  class="see-blog-updt">
+                <a href="{% url 'update_blog' blog.slug %}"> UPDATE </a>
+                </button><br>
+                <button  class="see-blog">
+                <a id="delete-obj" href="{% url 'delete_blog' blog.id %}"> DELETE </a>
+           </button></td>
+          </tr>     
+            {% endfor %}
+        </tbody>
+  
+ </table>
+
+{% endblock %}

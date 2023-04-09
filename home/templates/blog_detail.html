@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block start %}
+
+<div id="blog_detail_page">
+
+    <h1>{{blog_obj.title}}</h1>
+    <br>
+    <img src="/media/{{blog_obj.image}}" id="image-blog-detail" class="card-img-top" alt="...">
+    <br>
+    <p><b>{{blog_obj.content}}</b></p>
+    <h6>{{blogg_obj.user.username}}</h6>
+    <h6>{{blog_obj.created_at}}</h6>
+
+</div>
+
+{% endblock %}

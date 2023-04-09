@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block start %}
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="container">
+        <label class="editor"  for="title">Title :</label><br>
+        <input class="editor"  type="text" value="{{blog.title}}" name="title" placeholder="Enter Title" >
+        <div class="froala-editor">
+            {{ form.media }}
+            {{ form.as_p }}
+        </div>
+        <div>
+            <input class="editor"  type="file" name="image" class="image">
+        </div>
+        <button class="editor"  type="submit" class="blogcreatebutton">Create Blog</button>
+    </div>
+</form>
+
+{% endblock %}

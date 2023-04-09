@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block start %}
+    <header class="header">
+        <input type="hidden" id="csrf" value="{{ csrf_token }}">
+        <div class="imgcontainer">
+            <img src="https://images.unsplash.com/photo-1497864149936-d3163f0c0f4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt="Avatar" class="avatar">
+          </div>
+        
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" id="loginUsername" placeholder="Enter Username" name="uname" required>
+        
+            <label for="psw"><b>Password</b></label>
+            <input type="password" id="loginPassword" placeholder="Enter Password" name="psw" required>
+        
+            <button class="button-register-login" onclick="login()">Login</button>
+           
+          </div>
+  
+    </header>
+
+
+
+  {% endblock %}

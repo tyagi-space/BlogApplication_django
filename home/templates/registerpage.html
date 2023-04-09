@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block start %}
+    <header class="header1">
+        <input type="hidden" id="csrfs" value="{{ csrf_token }}">
+        <div class="imgcontainer">
+            <img src="https://imgs.search.brave.com/uIRB8kQR9RjV-Ru01wTmUoP4CPbF03oNjsL9wgKKaqs/rs:fit:1200:800:1/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9yZWdp/c3RyYXRpb24tZ29s/ZC10ZXh0LWJsYWNr/LWJhY2tncm91bmQt/ZC1yZW5kZXJlZC1y/b3lhbHR5LWZyZWUt/c3RvY2stcGljdHVy/ZS1pbWFnZS1jYW4t/YmUtdXNlZC1vbmxp/bmUtd2Vic2l0ZS04/NzkxMzk3MC5qcGc" alt="Avatar" class="avatar">
+          </div>
+        
+          <div class="container">
+            <label for="uname"><b>Enter Username</b></label>
+            <input type="text" id="makeUsername" placeholder="Kanha_123" name="uname" required>
+        
+            <label for="psw"><b>Make Password</b></label>
+            <input type="password" id="makePassword" placeholder="********" name="psw" required>
+
+            <label for="psw"><b>Confirm Password</b></label>
+            <input type="password" id="cnfPassword" placeholder="********" name="psw" required>
+        
+            <button class="button-register-login" id="button-register-login" onclick="register()">Register</button>
+           
+          </div>
+  
+    </header>
+
+
+{% endblock %}
